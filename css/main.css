@@ -1,0 +1,275 @@
+@import 'global.css';
+
+.body-layout {
+    position: relative;
+    z-index: -1;
+    width: auto;
+    height: 105vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.hero-image-container {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+.hero-image-container img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+
+.card-container {
+    position: relative;
+    z-index: 1;
+
+    animation: slideFromLeft 500ms ease;
+    max-width: min(350px, 80vw);
+    margin: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+
+}
+
+.card-inner-container {
+    display: block;
+    min-width: 100%;
+    padding: calc(1rem + 1vw);
+    border-radius: 0 0 10px 10px;
+}
+
+
+.title {
+    text-align: center;
+    margin: 0 auto;
+    grid-area: title;
+    font-weight: 900;
+    font-size: 2.6rem;
+    padding-bottom: 1.6rem;
+}
+
+.description {
+    text-align: center;
+    grid-area: description;
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-section {
+    padding: min(2.56rem, 5vw);
+    margin: 0;
+    max-width: 100%;
+    background-color: transparent;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.plan-section-text {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.plan-section-text img {
+    max-width: 100%;
+}
+
+.annual-plan span {
+    display: flex;
+    flex-direction: column;
+}
+
+.annual-plan__color span:nth-of-type(1) {
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.annual-plan__color span:nth-of-type(2) {
+    color: var(--Desaturated-blue);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.plan-section__link {
+    color: var(--Bright-blue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.payment-btn {
+    padding-top: 2.56rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-btn button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.payment-btn button:nth-of-type(1) {
+    border-radius: 10px;
+    filter: drop-shadow(0 8px 6px rgba(7, 15, 133, 0.245));
+}
+
+.payment-btn button:nth-of-type(2) {
+    margin-top: 1.5rem;
+    border: none;
+}
+
+footer {
+    max-height: 3vh;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: center;
+}
+
+/* color and some style */
+
+.body-color {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-color {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.inner-color {
+    background-color: var(--Very-pale-blue);
+}
+
+.payment-btn-color {
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    font-weight: 700;
+    border: none;
+}
+
+.cancel-btn-color {
+    color: var(--Bright-blue);
+    background: transparent;
+}
+
+.image-radius {
+    border-radius: 10px 10px 0 0;
+}
+
+.title-color {
+    color: var(--white);
+}
+
+.description-color {
+    color: var(--soft-blue);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media screen and (max-width:476px) {
+
+    .body-color {
+        background-image: url("../images/pattern-background-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: (2.6rem - 30%);
+    }
+
+    .description {
+        justify-self: center;
+        font-size: calc(1.5rem - 30%);
+        flex-direction: column;
+    }
+
+    .plan-section {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .annual-plan__color span:nth-of-type(1) {
+        font-size: calc(1.6rem - 30%);
+    }
+
+    .annual-plan__color span:nth-of-type(2) {
+        font-size: calc(1.6rem - 30%);
+    }
+
+    .plan-section__link {
+        font-size: calc(1.6rem - 30%);
+        text-decoration: underline;
+    }
+
+    .payment-btn {
+        padding-top: 2.56rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment-btn button {
+        padding: 1rem 2rem;
+        text-align: center;
+        font-size: calc(1.6rem - 30%);
+    }
+
+    .payment-btn button:nth-of-type(1) {
+        border-radius: 10px;
+        filter: drop-shadow(0 8px 6px rgba(7, 15, 133, 0.245));
+    }
+
+    .payment-btn button:nth-of-type(2) {
+        margin-top: 1.5rem;
+        border: none;
+    }
+
+}
