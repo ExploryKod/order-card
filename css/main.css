@@ -73,15 +73,15 @@ main {
     grid-area: description;
     font-weight: 400;
     font-size: 1.6rem;
-
     display: flex;
     flex-direction: column;
 }
 
 .plan-section {
     padding: min(2.56rem, 5vw);
-    margin: 0;
+    margin: 1.5rem auto;
     max-width: 100%;
+    border-radius: 10px;
     background-color: transparent;
     text-align: center;
 
@@ -105,18 +105,6 @@ main {
 .annual-plan span {
     display: flex;
     flex-direction: column;
-}
-
-.annual-plan__color span:nth-of-type(1) {
-    color: var(--Dark-blue);
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-.annual-plan__color span:nth-of-type(2) {
-    color: var(--Desaturated-blue);
-    font-size: 1.6rem;
-    font-weight: 700;
 }
 
 .plan-section__link {
@@ -147,14 +135,7 @@ main {
     border: none;
 }
 
-footer {
-    max-height: 3vh;
-    margin-top: 1rem;
-    position: absolute;
-    bottom: 0;
-}
-
-/* color and some style */
+/* color and some style for main */
 
 .body-color {
     background-image: url("../images/pattern-background-desktop.svg");
@@ -169,6 +150,22 @@ footer {
 
 .inner-color {
     background-color: var(--Very-pale-blue);
+}
+
+.plan-section__color {
+    background-color: var(--Pale-blue);
+}
+
+.annual-plan__color span:nth-of-type(1) {
+    color: var(--Dark-blue);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.annual-plan__color span:nth-of-type(2) {
+    color: var(--Desaturated-blue);
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .payment-btn-color {
@@ -195,6 +192,14 @@ footer {
     color: var(--Desaturated-blue);
 }
 
+/* Footer */
+
+footer {
+    max-height: 3vh;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+}
 
 .attribution {
     font-size: 11px;
